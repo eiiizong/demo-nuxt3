@@ -24,14 +24,7 @@
 
 <script setup lang="ts">
 import { ElButton, ElRow } from 'element-plus'
-import {
-  Check,
-  Delete,
-  Edit,
-  Message,
-  Search,
-  Star,
-} from '@element-plus/icons-vue'
+import { Check, Delete, Edit, Message, Search, Star } from '@element-plus/icons-vue'
 
 var a = '12'
 
