@@ -32,6 +32,10 @@ import {
   Search,
   Star,
 } from '@element-plus/icons-vue'
+
+var a = '12'
+
+console.log(1232323)
 </script>
 
 <style lang="scss" scoped>
