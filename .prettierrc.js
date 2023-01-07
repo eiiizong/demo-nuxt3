@@ -8,6 +8,6 @@ module.exports = {
   arrowParens: 'avoid', // 箭头函数尽可能省略括号
   bracketSameLine: true, // 标签换行后>单独一行
   // 关闭prettier尾随逗号
-  trailingComma: 'none',
-  arrowParens: 'always'
+  trailingComma: 'all',
+  arrowParens: 'always',
 }

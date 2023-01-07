@@ -1,18 +1,18 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:prettier/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
   rules: {
@@ -23,7 +23,6 @@ module.exports = {
     'vue/max-attributes-per-line': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-
     // 自动关闭标签定义
     'vue/html-self-closing': [
       'error',
@@ -31,12 +30,23 @@ module.exports = {
         html: {
           void: 'always',
           normal: 'never',
-          component: 'always'
+          component: 'always',
         },
         svg: 'always',
-        math: 'always'
-      }
+        math: 'always',
+      },
     ],
-    'prettier/prettier': 'error'
-  }
+    'prettier/prettier': [
+      'error',
+      {
+        trailingComma: 'all',
+      },
+    ],
+    '@typescript-eslint/no-namespace': [
+      'error',
+      {
+        allowDeclarations: true,
+      },
+    ],
+  },
 }
