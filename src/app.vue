@@ -29,6 +29,6 @@ import { Check, Delete, Edit, Message, Search, Star } from '@element-plus/icons-
 
 <style lang="scss" scoped>
 .app {
-  background-color: $color;
+  background-color: var(--yh-color-primary);
 }
 </style>
