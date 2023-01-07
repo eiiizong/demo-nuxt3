@@ -11,6 +11,9 @@
     <div class="desc">
       <span>抱歉，您访问的页面不存在。</span>
       <!-- <span>抱歉，服务器报告错误。</span> -->
+      <!-- <span>抱歉，您的网络连接已断开，请检查您的网络！</span> -->
+      <!-- <span>抱歉，当前页面暂无数据！</span> -->
+      <!-- <span>抱歉，您无权访问此页面。</span> -->
     </div>
 
     <div class="button-wrapper">
