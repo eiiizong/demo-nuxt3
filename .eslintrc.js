@@ -36,6 +36,14 @@ module.exports = {
         math: 'always',
       },
     ],
+    // 在标记的右括号前换行
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        singleline: 'never',
+        multiline: 'never',
+      },
+    ],
     'prettier/prettier': [
       'error',
       {
