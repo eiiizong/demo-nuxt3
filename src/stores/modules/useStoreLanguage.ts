@@ -26,10 +26,10 @@ const useStoreLanguage = defineStore(
     return { language, getStoreLanguage, updateStoreLanguage }
   },
   {
-    persist: {
-      storage: localStorage
-    }
-  }
+    persist: process.client && {
+      storage: sessionStorage,
+    },
+  },
 )
 
 export { useStoreLanguage }

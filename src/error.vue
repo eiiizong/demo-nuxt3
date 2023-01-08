@@ -1,8 +1,8 @@
 <template>
   <div class="error">
     <div class="img-wrapper">
-      <Exception-404 v-if="error.statusCode === '404'" />
-      <Exception-500 v-if="error.statusCode === '500'" />
+      <Exception-404 v-if="error.statusCode == '404'" />
+      <Exception-500 v-if="error.statusCode == '500'" />
     </div>
     <div class="title">{{ error.statusCode }}</div>
     <div class="desc">
@@ -34,6 +34,8 @@ const props = defineProps({
     },
   },
 })
+
+console.log(props, props.error, 23434)
 
 const router = useRouter()
 // 当前环境是否为开发环境
@@ -146,18 +148,17 @@ const onClickButton = () => {
     text-align: center;
   }
   .stack-wrapper {
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
+    $color: #333;
+    padding: 20px;
+    display: inline-flex;
     justify-content: center;
+    background-color: #fff;
+    margin-top: 20px;
+    color: $color;
     :deep(> pre) {
-      $color: #333;
-      background-color: #fff;
-      color: $color;
       font-family: Consolas;
       text-align: left;
-      padding: 1em;
-      padding-left: 0.8em;
+      padding: 0 20px;
       margin: 1em auto;
       border-radius: 5px;
       counter-reset: line;

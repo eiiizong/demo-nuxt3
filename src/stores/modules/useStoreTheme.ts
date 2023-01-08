@@ -29,9 +29,9 @@ const useStoreTheme = defineStore(
   },
   {
     persist: {
-      storage: localStorage
-    }
-  }
+      storage: localStorage,
+    },
+  },
 )
 
 export { useStoreTheme }

@@ -1,6 +1,5 @@
 import type { Ref } from 'vue'
 import type { Store } from '@/stores/types'
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 /**
@@ -28,7 +27,9 @@ const useStoreUserInfo = defineStore(
     return { userInfo, getStoreUserInfo, updateStoreUserInfo }
   },
   {
-    persist: true,
+    persist: process.client && {
+      storage: sessionStorage,
+    },
   },
 )
 

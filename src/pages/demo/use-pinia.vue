@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue'
+import { ElButton } from 'element-plus'
 import { useStoreUserInfo } from '@/stores/modules'
 
 const storeUserInfo = useStoreUserInfo()
