@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="home">
     Hello Nuxt3
 
     <el-row class="mb-4">
@@ -28,7 +28,7 @@ import { Check, Delete, Edit, Message, Search, Star } from '@element-plus/icons-
 </script>
 
 <style lang="scss" scoped>
-.app {
-  background-color: var(--yh-color-primary);
+.home {
+  width: 100%;
 }
 </style>

@@ -1,4 +1,4 @@
-@use '../variables/backgroundColor';
+@use '../variables/color';
 
 // @debug 'ceshi: #{backgroundColor.$page-background-color}';
 html,
@@ -11,7 +11,7 @@ body {
   width: 100%;
   height: 100%;
   height: 100vh;
-  background-color: backgroundColor.$page-background-color;
+  background-color: color.$color-page;
   overflow: auto;
 }
 
