@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 // 主动抛出错误
-// throw new Error('123')
+throw new Error('123')
 </script>
 
 <style lang="scss">
