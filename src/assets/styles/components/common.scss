@@ -1,18 +1,7 @@
-@use '../variables/color';
-
-// @debug 'ceshi: #{backgroundColor.$page-background-color}';
 html,
 body {
   height: 100%;
   overflow: hidden;
-}
-
-.app {
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  background-color: color.$color-page;
-  overflow: auto;
 }
 
 [v-cloak] {

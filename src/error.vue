@@ -6,7 +6,7 @@
     </div>
     <div class="title">{{ error.statusCode }}</div>
     <div class="desc">
-      {{ isDev ? error.statusMessage : errorTip }}
+      {{ isDev ? error.message : errorTip }}
     </div>
     <code v-if="isDev && error.stack" class="stack-wrapper" v-html="error.stack"> </code>
     <div class="button-wrapper">
@@ -35,6 +35,7 @@ const props = defineProps({
   },
 })
 
+const router = useRouter()
 // 当前环境是否为开发环境
 const isDev = getIsDev()
 
@@ -95,7 +96,6 @@ const buttonText = computed(() => {
 
   return str
 })
-console.log(props.error, getIsDev())
 
 // 错误处理
 const onClickButton = () => {
@@ -105,6 +105,7 @@ const onClickButton = () => {
     case '403':
       break
     case '404':
+      router.push('/')
       break
     case '500':
       clearError({ redirect: '/' })
@@ -124,8 +125,11 @@ const onClickButton = () => {
   width: 100%;
   min-height: 100%;
   padding: 48px 32px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   .img-wrapper {
     padding-bottom: 24px;
   }
@@ -143,11 +147,13 @@ const onClickButton = () => {
   }
   .stack-wrapper {
     width: 100%;
-    padding: 20px;
-    display: block;
-    :deep > pre {
-      background-color: #f6f8fa;
-      color: rgb(36, 41, 47);
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    :deep(> pre) {
+      $color: #333;
+      background-color: #fff;
+      color: $color;
       font-family: Consolas;
       text-align: left;
       padding: 1em;
@@ -159,18 +165,18 @@ const onClickButton = () => {
       word-spacing: normal;
       word-break: normal;
       word-wrap: normal;
-      line-height: 1.5;
+      line-height: 1.4;
       span {
         display: block;
-        line-height: 1.5rem;
+        line-height: 1.4;
         white-space: pre;
         &::before {
           counter-increment: line;
           content: counter(line);
           display: inline-block;
-          width: 3em;
+          width: 2em;
           text-align: right;
-          border-right: 2px solid rgb(36, 41, 47);
+          border-right: 2px solid $color;
           padding-right: 0.8em;
           margin-right: 1em;
           color: rgb(237, 50, 50);
@@ -178,7 +184,6 @@ const onClickButton = () => {
       }
     }
   }
-
   .button-wrapper {
     display: flex;
     align-items: center;

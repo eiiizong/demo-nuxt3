@@ -4,10 +4,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-// 主动抛出错误
-throw new Error('123')
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 @import '~/assets/styles/index.scss';
