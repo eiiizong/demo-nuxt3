@@ -29,7 +29,13 @@ import Component500 from '@/components/500/500.vue'
 import ComponentNetworkError from '@/components/network-error/network-error.vue'
 import ComponentNoData from '@/components/no-data/no-data.vue'
 
-// console.log(props, 987)
+const props = defineProps({
+  error: {
+    type: Object,
+    default: () => null,
+  },
+})
+console.log(props, 987)
 </script>
 
 <style lang="scss" scoped>

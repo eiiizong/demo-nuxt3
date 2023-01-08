@@ -1,8 +1,8 @@
-@import './libs/center-flex';
-@import './libs/center-line-height';
-@import './libs/center-position-margin';
-@import './libs/center-position-transform';
-@import './libs/no-select';
-@import './libs/shade';
-@import './libs/text-overflow';
-// @import './libs/tint';
+@use './libs/center-flex' as *;
+@use './libs/center-line-height' as *;
+@use './libs/center-position-margin' as *;
+@use './libs/center-position-transform' as *;
+@use './libs/no-select' as *;
+@use './libs/shade' as *;
+@use './libs/text-overflow' as *;
+@use './libs/tint' as *;

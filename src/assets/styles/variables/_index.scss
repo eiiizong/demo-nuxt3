@@ -1,9 +1,9 @@
 // mixins
-// @import '../mixins/index';
+@use '../mixins/index' as *;
 
 // 变量
 // @import 'color';
-@use 'backgroundColor';
+@use 'backgroundColor' as *;
 // @import 'border-color';
 // @import 'border-radius';
 // @import 'box-shadow';
