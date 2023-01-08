@@ -1,4 +1,3 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 /**
@@ -15,7 +14,7 @@ import { defineStore } from 'pinia'
 const useStoreLanguage = defineStore(
   'storeLanguage',
   () => {
-    const language = ref('zhCn')
+    const language = ref('zh-cn')
 
     const getStoreLanguage = computed(() => language.value)
 
@@ -27,7 +26,7 @@ const useStoreLanguage = defineStore(
   },
   {
     persist: process.client && {
-      storage: sessionStorage,
+      storage: localStorage,
     },
   },
 )
