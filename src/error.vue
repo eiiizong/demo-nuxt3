@@ -8,7 +8,7 @@
     <div class="desc">
       {{ isDev ? error.message : errorTip }}
     </div>
-    <code v-if="isDev && error.stack" class="stack-wrapper" v-html="error.stack"> </code>
+    <code v-if="isDev && error.stack" class="stack-wrapper" v-html="error.stack"></code>
     <div class="button-wrapper">
       <el-button type="primary" @click="onClickButton">{{ buttonText }}</el-button>
     </div>
@@ -35,8 +35,6 @@ const props = defineProps({
   },
 })
 
-console.log(props, props.error, 23434)
-
 const router = useRouter()
 // 当前环境是否为开发环境
 const isDev = getIsDev()
@@ -45,8 +43,7 @@ const isDev = getIsDev()
 const errorTip = computed(() => {
   let str = ''
   const { statusCode } = props.error
-
-  switch (statusCode) {
+  switch (statusCode + '') {
     case '403':
       str = '抱歉，您无权访问此页面。'
       break

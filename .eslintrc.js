@@ -23,6 +23,7 @@ module.exports = {
     'vue/max-attributes-per-line': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'vue/no-v-html': 'off',
     // 自动关闭标签定义
     'vue/html-self-closing': [
       'error',
