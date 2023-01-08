@@ -1,11 +1,12 @@
 <template>
   <div class="error">
     <div class="img-wrapper">
-      <Component403 />
-      <Component404 />
-      <Component500 />
-      <ComponentNetworkError />
-      <ComponentNoData />
+      <!-- <Component403 /> -->
+      <Exception-403 />
+      <Exception-404 />
+      <!-- <Component500 /> -->
+      <!-- <ComponentNetworkError /> -->
+      <!-- <ComponentNoData /> -->
     </div>
     <div class="title">404</div>
     <div class="desc">
@@ -23,12 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import Component403 from '@/components/403/403.vue'
-import Component404 from '@/components/404/404.vue'
-import Component500 from '@/components/500/500.vue'
-import ComponentNetworkError from '@/components/network-error/network-error.vue'
-import ComponentNoData from '@/components/no-data/no-data.vue'
-
 const props = defineProps({
   error: {
     type: Object,
